@@ -39,13 +39,21 @@ describe('FizzBuzz test for multiples of 3 and 5', () => {
              * When el número es procesado
              * Then se muestra "Buzz"
              */
+        
+            let valor_entrada = 10;
+            let respuesta_esperada = {
+                status: "ok", 
+                message: "El número es divisible por 5",
+                data: {
+                    input: 10, 
+                    output: "Buzz" 
+                }}
 
-            // Arrange
+            let resultado = fizzBuzz(valor_entrada)
 
-            // Act
-    
-            // Assert
-    
+            expect(typeof resultado.data.input).toBe("number"); 
+            expect(resultado).toEqual(respuesta_esperada);
+            expect(resultado.data.output).toBe("Buzz")
         })
 
         test('returns FizzBuzz when multiple of 3 and 5', () => {
@@ -56,6 +64,20 @@ describe('FizzBuzz test for multiples of 3 and 5', () => {
              * When el número es procesado
              * Then se muestra "FizzBuzz"
              */
+            let valor_entrada = 15;
+            let respuesta_esperada = {
+                status: "ok", 
+                message: "El número es divisible por 3 y 5",
+                data: {
+                    input: 15,  
+                    output: "FizzBuzz" 
+                }}
+
+            let resultado = fizzBuzz(valor_entrada)
+            
+            expect(typeof resultado.data.input).toBe("number"); 
+            expect(resultado).toEqual(respuesta_esperada);
+            expect(resultado.data.output).toBe("FizzBuzz")
         })
 
         test('returns number when is not multiple of 3 and 5', () => {
@@ -66,6 +88,21 @@ describe('FizzBuzz test for multiples of 3 and 5', () => {
              * When el número es procesado
              * Then se muestra el número ingresado
              */
+
+            let valor_entrada = 8;
+            let respuesta_esperada = {
+                status: "ok", 
+                message: "El número no es divisible por 3 ni 5",
+                data: {
+                    input: 8,  
+                    output: 8 
+                }}
+
+            let resultado = fizzBuzz(valor_entrada)
+            
+            expect(typeof resultado.data.input).toBe("number"); 
+            expect(resultado).toEqual(respuesta_esperada);
+            expect(resultado.data.output).toBe(8)
         })
     }
 )
