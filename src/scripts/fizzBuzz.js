@@ -10,7 +10,8 @@
             }
     }
  * */ 
-export let historial = []
+
+export let record = []
 
 class Round {
     constructor(numUser, result) {
@@ -19,7 +20,7 @@ class Round {
     }
 
     toString() {
-        return `Número enviado: ${this._numUser} - Resultado: ${this._result}<br>`
+        return `Number submitted: ${this._numUser} - Result: ${this._result}<br>`
     }
 }
 
@@ -36,27 +37,27 @@ export let fizzBuzz = (numUser) => {
     try{
         if(isNaN(numUser)) {
             response.status = 'error'
-            response.message = 'input is not a number'
+            response.message = 'Input is not a number'
             response.data.input = null
             response.data.output = ''
         }
     
         if(numUser % 3 === 0 && numUser % 5 === 0) {
-            response.message = 'El número es divisible por 3 y 5'
+            response.message = 'The number is divisible by 3 and 5'
             response.output = 'FizzBuzz'
         } else if(numUser % 3 === 0) {
-            response.message = 'El número es divisible por 3'
+            response.message = 'The number is divisible by 3'
             response.output = 'Fizz'
         } else if (numUser % 5 === 0){
-            response.message = 'El número es divisible por 5'
+            response.message = 'The number is divisible by 5'
             response.output = 'Buzz'
         } else {
-            response.message = 'El número no es divisible por 3 ni 5'
+            response.message = 'The number is not divisible by 3 nor 5'
             response.output = numUser
         }
     
-        historial.push(new Round(numUser, response.output))
-        
+        record.push(new Round(numUser, response.output))
+
     } catch(error) {
         response.status = 'error'
         response.message = error.message

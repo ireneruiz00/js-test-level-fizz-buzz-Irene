@@ -3,7 +3,9 @@
  * */ 
 import { fizzBuzz } from "./fizzBuzz.js"
 
-const button = document.getElementById('submitInput')
-
-button.addEventListener("click", fizzBuzz)
+form.addEventListener("submit", (event) => {
+    event.preventDefault();
+    let numUser = +document.getElementById("numUser").value;
+    fizzBuzz(numUser)
+});
 

@@ -2,15 +2,15 @@
  * Responsabilidad: gestionar el los flujos de que recibe y muestra la interfáz
  * */ 
 import { fizzBuzz } from "./fizzBuzz.js"
-import { historial } from "./fizzBuzz.js"
+import { record } from "./fizzBuzz.js"
 
 let numUser = parseInt(document.getElementById('numUser').value)
 let resultDiv = document.getElementById('result')
 
+let result = fizzBuzz(numUser)
+resultDiv.innerHTML = result.data.output
 
-resultDiv.innerHTML = fizzBuzz(numUser)
+let recordDiv = document.getElementById('record')
+recordDiv.innerHTML = ''
 
-let historialDiv = document.getElementById('historial')
-historialDiv.innerHTML = ''
-
-historial.forEach((round) => historialDiv.innerHTML += round.toString())
+record.forEach((round) => recordDiv.innerHTML += round.toString())

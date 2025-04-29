@@ -16,7 +16,7 @@ describe('FizzBuzz test for multiples of 3 and 5', () => {
             let valor_entrada = 9;
             let respuesta_esperada = {
                 status: "ok", // Código indicando éxito
-                message: "El número es divisible por 3", // Mensaje de validación
+                message: "The number is divisible by 3", // Mensaje de validación
                 data: {
                     input: 9,  // Número evaluado
                     output: "Fizz" // Resultado esperado
@@ -43,7 +43,7 @@ describe('FizzBuzz test for multiples of 3 and 5', () => {
             let valor_entrada = 10;
             let respuesta_esperada = {
                 status: "ok", 
-                message: "El número es divisible por 5",
+                message: "The number is divisible by 5",
                 data: {
                     input: 10, 
                     output: "Buzz" 
@@ -67,7 +67,7 @@ describe('FizzBuzz test for multiples of 3 and 5', () => {
             let valor_entrada = 15;
             let respuesta_esperada = {
                 status: "ok", 
-                message: "El número es divisible por 3 y 5",
+                message: "The number is divisible by 3 and 5",
                 data: {
                     input: 15,  
                     output: "FizzBuzz" 
@@ -92,7 +92,7 @@ describe('FizzBuzz test for multiples of 3 and 5', () => {
             let valor_entrada = 8;
             let respuesta_esperada = {
                 status: "ok", 
-                message: "El número no es divisible por 3 ni 5",
+                message: "The number is not divisible by 3 nor 5",
                 data: {
                     input: 8,  
                     output: 8 

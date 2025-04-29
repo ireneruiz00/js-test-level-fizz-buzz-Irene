@@ -7,14 +7,16 @@
 </head>
 <body>
     <H2>Fizzbuzz</H2>
-    <label for="numUser">Introdueix un número</label>
-    <input type="number" placeholder="ex: 5" id="numUser">
-    <button type="button" id="submitInput">Submit</button>
+    <form>
+        <label for="numUser">Introduce a number</label>
+        <input type="number" placeholder="ex: 5" id="numUser">
+        <button type="button" id="submit">Submit</button>
+    </form>
 
     <div id="result"></div>
-
-    <h3>Historial</h3>
-    <div id="historial"></div>
+    <br>
+    <h3>Record</h3>
+    <div id="record"></div>
 
     <script src="src/scripts/events.js" type="module"></script>
     <script src="src/scripts/fizzBuzz.js" type="module"></script>
