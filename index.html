@@ -8,16 +8,18 @@
 <body>
     <H2>Fizzbuzz</H2>
     <label for="numUser">Introdueix un número</label>
-    <input type="text" placeholder="ex: 5">
-    <button type="button" onclick="fizzbuzz()">Submit</button>
+    <input type="number" placeholder="ex: 5" id="numUser">
+    <button type="button" id="submitInput">Submit</button>
 
     <div id="result"></div>
 
     <h3>Historial</h3>
     <div id="historial"></div>
 
-    <script src="src/scripts/dom.js"></script>
-    <script src="src/scripts/events.js"></script>
-    <script src="src/scripts/fizzBuzz.js"></script>
+    <script src="src/scripts/events.js" type="module"></script>
+    <script src="src/scripts/fizzBuzz.js" type="module"></script>
+    <script src="src/scripts/dom.js" type="module"></script>
+    
+    
 </body>
 </html>
