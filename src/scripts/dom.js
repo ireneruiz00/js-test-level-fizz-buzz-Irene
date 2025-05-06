@@ -1,16 +1,10 @@
 /**
  * Responsabilidad: gestionar el los flujos de que recibe y muestra la interfáz
  * */ 
-import { fizzBuzz } from "./fizzBuzz.js"
-import { record } from "./fizzBuzz.js"
 
-let numUser = parseInt(document.getElementById('numUser').value)
-let resultDiv = document.getElementById('result')
+export let input = document.getElementById('numUser')
 
-let result = fizzBuzz(numUser)
-resultDiv.innerHTML = result.data.output
+export let resultDiv = document.getElementById('result')
 
-let recordDiv = document.getElementById('record')
-recordDiv.innerHTML = ''
+export let recordDiv = document.getElementById('record')
 
-record.forEach((round) => recordDiv.innerHTML += round.toString())

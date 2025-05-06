@@ -11,7 +11,7 @@
     }
  * */ 
 
-export let record = []
+export const record = []
 
 class Round {
     constructor(numUser, result) {
@@ -44,19 +44,19 @@ export let fizzBuzz = (numUser) => {
     
         if(numUser % 3 === 0 && numUser % 5 === 0) {
             response.message = 'The number is divisible by 3 and 5'
-            response.output = 'FizzBuzz'
+            response.data.output = 'FizzBuzz'
         } else if(numUser % 3 === 0) {
             response.message = 'The number is divisible by 3'
-            response.output = 'Fizz'
+            response.data.output = 'Fizz'
         } else if (numUser % 5 === 0){
             response.message = 'The number is divisible by 5'
-            response.output = 'Buzz'
+            response.data.output = 'Buzz'
         } else {
             response.message = 'The number is not divisible by 3 nor 5'
-            response.output = numUser
+            response.data.output = numUser
         }
     
-        record.push(new Round(numUser, response.output))
+        record.push(new Round(numUser, response.data.output))
 
     } catch(error) {
         response.status = 'error'
